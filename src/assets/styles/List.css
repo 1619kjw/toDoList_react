@@ -1,0 +1,11 @@
+li {
+    border-bottom:2px solid #ddd;
+    width:max-content;
+}
+li input {
+    margin-right:10px;
+}
+li span {
+    
+}
+li button {}

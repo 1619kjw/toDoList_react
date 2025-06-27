@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/* react-폰트어썸연결(react에서 폰트어썸사용하겠다) */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+/* 개별 fontawesome 불러오기 *//* (어떤 아이콘 가져올건지 세팅) */
+// import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
+//import { faArrowLeft, faArrowRight, faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import * as brands from '@fortawesome/free-brands-svg-icons'
+import * as solid from '@fortawesome/free-solid-svg-icons'
+/* 컴포넌트 호출 */
+import Header from './Header';
+import Todo from './Todo';
+import List from './List';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function App(){
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div id="wrap" style={{
+        backgroundColor:'#eee',
+        width:'420px',
+        height:'80vh',
+        margin:'0 auto',
+        padding:'30px 15px',
+        textAlign:'center',
+      }}>
+      <Header />{/* 태그가 아닌 컴포넌트 호출 */}
+      <Todo />
+      <ul>
+        <List />
+        <List />
+        <List />
+        <List />
+        <List />
+        <List />
+      </ul>
+    </div>
   )
 }
 
